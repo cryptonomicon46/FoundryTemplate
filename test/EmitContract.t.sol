@@ -16,7 +16,7 @@ contract EmitContractTest is Test {
 
     }
     function testExpectEmit() public {
-        vm.expectEmit(true,true,false,true);
+        vm.expectEmit(true,true,true,true);
          emit Transfer(address(this),address(1337),1337);
          emitter.t();
     }

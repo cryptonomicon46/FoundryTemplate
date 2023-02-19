@@ -59,5 +59,9 @@ Only run selected tests tests
 forge test --match-path test/Counter.t.sol --match-contract CounterTest --match-test "testIncrement*"
 forge test --match-path test/ContractB.t.sol --match-contract ContractBTest --match-test "testNumberis42*"
 
+forge test --match-path test/Fork.t.sol --match-contract ForkTest --match-test "test\*"
+
 Debug tests
 forge test --debug "testIncrement()"
+
+forge test --fork-url <url>

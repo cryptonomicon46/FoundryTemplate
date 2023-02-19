@@ -885,6 +885,46 @@
         }
       }
     },
+    "src/Safe.sol": {
+      "lastModificationDate": 1676819469768,
+      "contentHash": "37478a15227a89107b9d867c18a8e354",
+      "sourceName": "src/Safe.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Safe": {
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Safe.sol/Safe.json"
+        }
+      }
+    },
     "test/ContractB.t.sol": {
       "lastModificationDate": 1676754285975,
       "contentHash": "9228d0c4b4854a058f0236c312153518",
@@ -1002,8 +1042,8 @@
       }
     },
     "test/EmitContract.t.sol": {
-      "lastModificationDate": 1676756710308,
-      "contentHash": "48bbc3a3d738198d131dd15d65f9d248",
+      "lastModificationDate": 1676757061668,
+      "contentHash": "a0b87e98e34f8f1ba0ccd9582b053e09",
       "sourceName": "test/EmitContract.t.sol",
       "solcConfig": {
         "settings": {
@@ -1056,6 +1096,64 @@
       "artifacts": {
         "EmitContractTest": {
           "0.8.16+commit.07a7930e.Darwin.appleclang": "EmitContract.t.sol/EmitContractTest.json"
+        }
+      }
+    },
+    "test/Safe.t.sol": {
+      "lastModificationDate": 1676819950200,
+      "contentHash": "ed4dbad2420f59aa751f517200f21d10",
+      "sourceName": "test/Safe.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/Safe.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "SafeTest": {
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "Safe.t.sol/SafeTest.json"
         }
       }
     }
