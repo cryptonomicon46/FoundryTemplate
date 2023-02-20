@@ -61,7 +61,13 @@ forge test --match-path test/ContractB.t.sol --match-contract ContractBTest --ma
 
 forge test --match-path test/Fork.t.sol --match-contract ForkTest --match-test "test\*"
 
+forge test --match-path test/Permi2Vault.t.sol --match-contract Permit2VaultTest --match-test "test\*"
+
 Debug tests
 forge test --debug "testIncrement()"
 
 forge test --fork-url <url>
+
+To deploy the contract onto Goerli
+forge create --rpc-url <your_rpc_url> --private-key <your_private_key> src/MyContract.sol:MyContract
+forge create --rpc-url $GOERLI_RPC_URL --private-key $PRIVATE_KEY src/Counter.sol:Counter
