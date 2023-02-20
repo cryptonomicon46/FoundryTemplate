@@ -70,4 +70,10 @@ forge test --fork-url <url>
 
 To deploy the contract onto Goerli
 forge create --rpc-url <your_rpc_url> --private-key <your_private_key> src/MyContract.sol:MyContract
-forge create --rpc-url $GOERLI_RPC_URL --private-key $PRIVATE_KEY src/Counter.sol:Counter
+forge create --rpc-url $GOERLI_RPC_URL --private-key $PRIVATE_KEY src/Permit2VauLT.sol:Permit2Vault
+
+First, deploy the MockERC20 to Kovan:
+
+```bash
+./scripts/deploy_token_goerli.sh
+```
