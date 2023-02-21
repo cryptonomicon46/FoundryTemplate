@@ -62,7 +62,7 @@ forge test --match-path test/ContractB.t.sol --match-contract ContractBTest --ma
 forge test --match-path test/Fork.t.sol --match-contract ForkTest --match-test "test\*"
 
 forge test --match-path test/Permi2Vault.t.sol --match-contract Permit2VaultTest --match-test "test\*"
-forge test --match-path test/MultiCall.t.sol --match-contract MulticallTest --match-test "test\*"
+forge test --match-path test/MultiCall.t.sol --match-contract MulticallTest --match-test "test\_\*"
 
 Debug tests
 forge test --debug "testIncrement()"

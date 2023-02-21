@@ -1219,6 +1219,55 @@
         }
       }
     },
+    "src/TeamFarm.sol": {
+      "lastModificationDate": 1677001752046,
+      "contentHash": "a0090f73642d4f539b75ac8821c580e8",
+      "sourceName": "src/TeamFarm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "IERC20": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.sol/IERC20.json"
+        },
+        "IERC4626": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.sol/IERC4626.json"
+        },
+        "IWETH": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.sol/IWETH.json"
+        },
+        "TeamFarm": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.sol/TeamFarm.json"
+        }
+      }
+    },
     "test/ContractB.t.sol": {
       "lastModificationDate": 1676756855813,
       "contentHash": "9228d0c4b4854a058f0236c312153518",
@@ -1616,6 +1665,74 @@
       "artifacts": {
         "SafeTest": {
           "0.8.18+commit.87f61d96.Darwin.appleclang": "Safe.t.sol/SafeTest.json"
+        }
+      }
+    },
+    "test/TeamFarm.t.sol": {
+      "lastModificationDate": 1677001853192,
+      "contentHash": "9a04ee02f087ab2da83fbadda7a0cf0d",
+      "sourceName": "test/TeamFarm.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/TeamFarm.sol",
+        "test/TestUtils.sol"
+      ],
+      "versionRequirement": "^0.8.17",
+      "artifacts": {
+        "ERC20": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.t.sol/ERC20.json"
+        },
+        "TeamFarmTest": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.t.sol/TeamFarmTest.json"
+        },
+        "TestVault": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.t.sol/TestVault.json"
+        },
+        "WETH": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "TeamFarm.t.sol/WETH.json"
         }
       }
     },
