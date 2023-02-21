@@ -19,7 +19,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -59,7 +59,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -108,7 +108,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -160,7 +160,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -203,7 +203,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -245,7 +245,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -291,7 +291,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -331,7 +331,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -371,7 +371,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -413,7 +413,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -453,7 +453,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -498,7 +498,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -541,7 +541,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -597,7 +597,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -640,7 +640,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -680,7 +680,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -720,7 +720,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -760,7 +760,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -800,7 +800,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -853,7 +853,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -896,7 +896,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -936,7 +936,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -968,6 +968,48 @@
         }
       }
     },
+    "src/MultiCall.sol": {
+      "lastModificationDate": 1676991734590,
+      "contentHash": "1ef48209de889e07e06d8172e3b108a7",
+      "sourceName": "src/MultiCall.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "Multicall": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "src/MultiCall.sol/Multicall.json"
+        }
+      }
+    },
     "src/Permit2Clone.sol": {
       "lastModificationDate": 1676927620190,
       "contentHash": "1d14951c5dfbc16ae7e787760d0e2d53",
@@ -976,7 +1018,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1018,7 +1060,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1061,7 +1103,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1103,7 +1145,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1145,7 +1187,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1185,7 +1227,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1243,7 +1285,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1301,7 +1343,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1352,14 +1394,14 @@
       }
     },
     "test/Fork.t.sol": {
-      "lastModificationDate": 1676844654964,
-      "contentHash": "91ec3b6e7e7db96e6b6f1d7a728a0a91",
+      "lastModificationDate": 1676932952532,
+      "contentHash": "5e4f217b5e73719832924ca61acde5ab",
       "sourceName": "test/Fork.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1408,6 +1450,53 @@
         }
       }
     },
+    "test/MultiCall.t.sol": {
+      "lastModificationDate": 1676991709214,
+      "contentHash": "162731b76c5a4d70266a87bbe2840cdb",
+      "sourceName": "test/MultiCall.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/console2.sol",
+        "src/MultiCall.sol"
+      ],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "MultiCallTest": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "MultiCall.t.sol/MultiCallTest.json"
+        },
+        "Store": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "MultiCall.t.sol/Store.json"
+        }
+      }
+    },
     "test/Permi2Vault.t.sol": {
       "lastModificationDate": 1676927634850,
       "contentHash": "13e77891b56c8ef233102ecc0b91561b",
@@ -1416,7 +1505,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1480,7 +1569,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",
@@ -1538,7 +1627,7 @@
         "settings": {
           "optimizer": {
             "enabled": true,
-            "runs": 200
+            "runs": 750
           },
           "metadata": {
             "bytecodeHash": "ipfs",

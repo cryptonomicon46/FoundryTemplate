@@ -18,20 +18,18 @@ contract ForkTest is Test {
     //string MAINNET_RPC_URL = vm.envString("MAINNET_RPC_URL");
     //string OPTIMISM_RPC_URL = vm.envString("OPTIMISM_RPC_URL");
 
-        // string memory MAINNET_RPC_URL = vm.envString("MAINNET_RPC_URL");
-        // string memory OPTIMISM_RPC_URL = vm.envString("OPTIMISM_RPC_URL");
+        string  MAINNET_RPC_URL = vm.envString("RPC_MAINNET");
+        string  OPTIMISM_RPC_URL = vm.envString("RPC_OPTIMISM");
 
 
     function setUp() public {
     console2.log("Setup Mainnet and Optimism forks...");
 
 
-        // mainnetFork = vm.createFork(MAINNET_RPC_URL);
-        // optimismFork = vm.createFork(OPTIMISM_RPC_URL);
+        mainnetFork = vm.createFork(MAINNET_RPC_URL);
+        optimismFork = vm.createFork(OPTIMISM_RPC_URL);
 
 
-        mainnetFork = vm.createSelectFork(vm.envString("$MAINNET_RPC_URL"));
-        optimismFork = vm.createSelectFork(vm.envString("$OPTIMISM_RPC_URL"));
     }
 
     // // demonstrate fork ids are unique
