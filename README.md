@@ -81,3 +81,5 @@ First, deploy the MockERC20 to Kovan:
 
 forge test --gas-report.
 forge test --match-test testBurn --gas-report
+
+forge test --match-path test/CompoundV2.t.sol --match-contract CompoundV2Test --match-test "testMint_cDai" -vvvv
