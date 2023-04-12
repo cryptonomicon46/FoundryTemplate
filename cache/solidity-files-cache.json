@@ -1268,6 +1268,66 @@
         }
       }
     },
+    "test/Compound.t.sol": {
+      "lastModificationDate": 1681237281420,
+      "contentHash": "204e2effc931d77899f4bde35c7f4f01",
+      "sourceName": "test/Compound.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "test/interfaces/CheatCodes.sol",
+        "test/interfaces/CompoundInterfaces.sol",
+        "test/interfaces/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "CompoundV2Example": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "Compound.t.sol/CompoundV2Example.json"
+        }
+      }
+    },
     "test/ContractB.t.sol": {
       "lastModificationDate": 1676756855813,
       "contentHash": "9228d0c4b4854a058f0236c312153518",
@@ -1790,6 +1850,129 @@
       "artifacts": {
         "TestUtils": {
           "0.8.18+commit.87f61d96.Darwin.appleclang": "TestUtils.sol/TestUtils.json"
+        }
+      }
+    },
+    "test/interfaces/CheatCodes.sol": {
+      "lastModificationDate": 1681170993076,
+      "contentHash": "9dd1ab59dc017f4a144bfc9475bf881a",
+      "sourceName": "test/interfaces/CheatCodes.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "CheatCodes": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "CheatCodes.sol/CheatCodes.json"
+        }
+      }
+    },
+    "test/interfaces/CompoundInterfaces.sol": {
+      "lastModificationDate": 1681236824765,
+      "contentHash": "4cf2f87ca2786445c9b08ec7851fed83",
+      "sourceName": "test/interfaces/CompoundInterfaces.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "CERC20": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "CompoundInterfaces.sol/CERC20.json"
+        },
+        "CETH": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "CompoundInterfaces.sol/CETH.json"
+        }
+      }
+    },
+    "test/interfaces/IERC20.sol": {
+      "lastModificationDate": 1681170993088,
+      "contentHash": "c5d136d6ded70dfa9a8a31e1a64ab99a",
+      "sourceName": "test/interfaces/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 750
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20": {
+          "0.8.18+commit.87f61d96.Darwin.appleclang": "IERC20.sol/IERC20.json"
         }
       }
     }
