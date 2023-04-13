@@ -234,7 +234,8 @@ contract CompoundV2Test is Test {
     }
 
    function testSupplyETH_ClaimComp() public {
-        emit log_named_uint("Comp totalSupply", comp.totalSupply());
+        emit log_named_uint ("Comp totalSupply", comp.totalSupply());
+        uint256 initialCompBal = comp.balanceOf(here);
 
         address[] memory tokens = new address[](1);
         tokens[0] = address(cETH);
@@ -256,6 +257,8 @@ contract CompoundV2Test is Test {
         // cETH.borrow(500 ether);
         vm.roll(block.number + 1_000_000);
         comptroller.claimComp(here, cTokens);
+        uint256 finalCompBal = comp.balanceOf(here);
+        assertGt(finalCompBal, initialCompBal);
 
         emit log_named_decimal_uint("Comp balance after time advance", comp.balanceOf(here),18);
         
