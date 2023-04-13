@@ -1303,10 +1303,10 @@
   },
   "ast": {
     "absolutePath": "test/ContractB.t.sol",
-    "id": 29488,
+    "id": 29667,
     "exportedSymbols": {
       "ContractBTest": [
-        29487
+        29666
       ],
       "Counter": [
         27383
@@ -1364,7 +1364,7 @@
     "src": "39:679:31",
     "nodes": [
       {
-        "id": 29427,
+        "id": 29606,
         "nodeType": "PragmaDirective",
         "src": "39:24:31",
         "nodes": [],
@@ -1376,51 +1376,51 @@
         ]
       },
       {
-        "id": 29428,
+        "id": 29607,
         "nodeType": "ImportDirective",
         "src": "65:28:31",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/Test.sol",
         "file": "forge-std/Test.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29488,
+        "scope": 29667,
         "sourceUnit": 9112,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29429,
+        "id": 29608,
         "nodeType": "ImportDirective",
         "src": "94:28:31",
         "nodes": [],
         "absolutePath": "src/Counter.sol",
         "file": "../src/Counter.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29488,
+        "scope": 29667,
         "sourceUnit": 27384,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29430,
+        "id": 29609,
         "nodeType": "ImportDirective",
         "src": "185:32:31",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/console2.sol",
         "file": "forge-std/console2.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29488,
+        "scope": 29667,
         "sourceUnit": 26562,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29487,
+        "id": 29666,
         "nodeType": "ContractDefinition",
         "src": "220:498:31",
         "nodes": [
           {
-            "id": 29434,
+            "id": 29613,
             "nodeType": "VariableDeclaration",
             "src": "256:18:31",
             "nodes": [],
@@ -1428,7 +1428,7 @@
             "mutability": "mutable",
             "name": "testNumber",
             "nameLocation": "264:10:31",
-            "scope": 29487,
+            "scope": 29666,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1436,7 +1436,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 29433,
+              "id": 29612,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "256:7:31",
@@ -1448,29 +1448,29 @@
             "visibility": "internal"
           },
           {
-            "id": 29442,
+            "id": 29621,
             "nodeType": "FunctionDefinition",
             "src": "280:56:31",
             "nodes": [],
             "body": {
-              "id": 29441,
+              "id": 29620,
               "nodeType": "Block",
               "src": "304:32:31",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 29439,
+                    "id": 29618,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29437,
+                      "id": 29616,
                       "name": "testNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29434,
+                      "referencedDeclaration": 29613,
                       "src": "314:10:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1481,7 +1481,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "3432",
-                      "id": 29438,
+                      "id": 29617,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1501,7 +1501,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 29440,
+                  "id": 29619,
                   "nodeType": "ExpressionStatement",
                   "src": "314:15:31"
                 }
@@ -1514,29 +1514,29 @@
             "name": "setUp",
             "nameLocation": "289:5:31",
             "parameters": {
-              "id": 29435,
+              "id": 29614,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "294:2:31"
             },
             "returnParameters": {
-              "id": 29436,
+              "id": 29615,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "304:0:31"
             },
-            "scope": 29487,
+            "scope": 29666,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29457,
+            "id": 29636,
             "nodeType": "FunctionDefinition",
             "src": "342:124:31",
             "nodes": [],
             "body": {
-              "id": 29456,
+              "id": 29635,
               "nodeType": "Block",
               "src": "375:91:31",
               "nodes": [],
@@ -1546,7 +1546,7 @@
                     "arguments": [
                       {
                         "hexValue": "54657374204e756d62657220697320343220746573742e2e2e",
-                        "id": 29448,
+                        "id": 29627,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1569,7 +1569,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29445,
+                        "id": 29624,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1580,7 +1580,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29447,
+                      "id": 29626,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1595,7 +1595,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29449,
+                    "id": 29628,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1611,7 +1611,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29450,
+                  "id": 29629,
                   "nodeType": "ExpressionStatement",
                   "src": "385:41:31"
                 },
@@ -1619,11 +1619,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 29452,
+                        "id": 29631,
                         "name": "testNumber",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29434,
+                        "referencedDeclaration": 29613,
                         "src": "445:10:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1632,7 +1632,7 @@
                       },
                       {
                         "hexValue": "3432",
-                        "id": 29453,
+                        "id": 29632,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1658,7 +1658,7 @@
                           "typeString": "int_const 42"
                         }
                       ],
-                      "id": 29451,
+                      "id": 29630,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1690,7 +1690,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29454,
+                    "id": 29633,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1706,7 +1706,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29455,
+                  "id": 29634,
                   "nodeType": "ExpressionStatement",
                   "src": "436:23:31"
                 }
@@ -1719,29 +1719,29 @@
             "name": "testNumberis42",
             "nameLocation": "351:14:31",
             "parameters": {
-              "id": 29443,
+              "id": 29622,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "365:2:31"
             },
             "returnParameters": {
-              "id": 29444,
+              "id": 29623,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "375:0:31"
             },
-            "scope": 29487,
+            "scope": 29666,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29471,
+            "id": 29650,
             "nodeType": "FunctionDefinition",
             "src": "472:127:31",
             "nodes": [],
             "body": {
-              "id": 29470,
+              "id": 29649,
               "nodeType": "Block",
               "src": "509:90:31",
               "nodes": [],
@@ -1751,7 +1751,7 @@
                     "arguments": [
                       {
                         "hexValue": "5465737420746573744661696c5375627472616374343320746573742e2e2e",
-                        "id": 29463,
+                        "id": 29642,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1774,7 +1774,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29460,
+                        "id": 29639,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1785,7 +1785,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29462,
+                      "id": 29641,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1800,7 +1800,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29464,
+                    "id": 29643,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1816,23 +1816,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29465,
+                  "id": 29644,
                   "nodeType": "ExpressionStatement",
                   "src": "519:47:31"
                 },
                 {
                   "expression": {
-                    "id": 29468,
+                    "id": 29647,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29466,
+                      "id": 29645,
                       "name": "testNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29434,
+                      "referencedDeclaration": 29613,
                       "src": "577:10:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1843,7 +1843,7 @@
                     "operator": "-=",
                     "rightHandSide": {
                       "hexValue": "3433",
-                      "id": 29467,
+                      "id": 29646,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1863,7 +1863,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 29469,
+                  "id": 29648,
                   "nodeType": "ExpressionStatement",
                   "src": "577:15:31"
                 }
@@ -1876,29 +1876,29 @@
             "name": "testFailSubtract43",
             "nameLocation": "481:18:31",
             "parameters": {
-              "id": 29458,
+              "id": 29637,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "499:2:31"
             },
             "returnParameters": {
-              "id": 29459,
+              "id": 29638,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "509:0:31"
             },
-            "scope": 29487,
+            "scope": 29666,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29486,
+            "id": 29665,
             "nodeType": "FunctionDefinition",
             "src": "605:111:31",
             "nodes": [],
             "body": {
-              "id": 29485,
+              "id": 29664,
               "nodeType": "Block",
               "src": "644:72:31",
               "nodes": [],
@@ -1908,7 +1908,7 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 29477,
+                          "id": 29656,
                           "name": "stdError",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -1919,7 +1919,7 @@
                             "typeString": "type(library stdError)"
                           }
                         },
-                        "id": 29478,
+                        "id": 29657,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1943,7 +1943,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29474,
+                        "id": 29653,
                         "name": "vm",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1954,7 +1954,7 @@
                           "typeString": "contract Vm"
                         }
                       },
-                      "id": 29476,
+                      "id": 29655,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1969,7 +1969,7 @@
                         "typeString": "function (bytes memory) external"
                       }
                     },
-                    "id": 29479,
+                    "id": 29658,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1985,23 +1985,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29480,
+                  "id": 29659,
                   "nodeType": "ExpressionStatement",
                   "src": "650:41:31"
                 },
                 {
                   "expression": {
-                    "id": 29483,
+                    "id": 29662,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29481,
+                      "id": 29660,
                       "name": "testNumber",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29434,
+                      "referencedDeclaration": 29613,
                       "src": "697:10:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2012,7 +2012,7 @@
                     "operator": "-=",
                     "rightHandSide": {
                       "hexValue": "3433",
-                      "id": 29482,
+                      "id": 29661,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2032,7 +2032,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 29484,
+                  "id": 29663,
                   "nodeType": "ExpressionStatement",
                   "src": "697:16:31"
                 }
@@ -2045,18 +2045,18 @@
             "name": "testCannotSubtract43",
             "nameLocation": "614:20:31",
             "parameters": {
-              "id": 29472,
+              "id": 29651,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "634:2:31"
             },
             "returnParameters": {
-              "id": 29473,
+              "id": 29652,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "644:0:31"
             },
-            "scope": 29487,
+            "scope": 29666,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -2066,7 +2066,7 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 29431,
+              "id": 29610,
               "name": "Test",
               "nameLocations": [
                 "246:4:31"
@@ -2075,7 +2075,7 @@
               "referencedDeclaration": 9111,
               "src": "246:4:31"
             },
-            "id": 29432,
+            "id": 29611,
             "nodeType": "InheritanceSpecifier",
             "src": "246:4:31"
           }
@@ -2085,7 +2085,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          29487,
+          29666,
           9111,
           1846,
           1843,
@@ -2099,7 +2099,7 @@
         ],
         "name": "ContractBTest",
         "nameLocation": "229:13:31",
-        "scope": 29488,
+        "scope": 29667,
         "usedErrors": []
       }
     ],

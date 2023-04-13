@@ -1267,13 +1267,13 @@
   },
   "ast": {
     "absolutePath": "test/Fork.t.sol",
-    "id": 29764,
+    "id": 29943,
     "exportedSymbols": {
       "DSTest": [
         1786
       ],
       "ForkTest": [
-        29763
+        29942
       ],
       "StdAssertions": [
         3129
@@ -1325,7 +1325,7 @@
     "src": "154:2225:34",
     "nodes": [
       {
-        "id": 29708,
+        "id": 29887,
         "nodeType": "PragmaDirective",
         "src": "154:24:34",
         "nodes": [],
@@ -1337,38 +1337,38 @@
         ]
       },
       {
-        "id": 29709,
+        "id": 29888,
         "nodeType": "ImportDirective",
         "src": "180:28:34",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/Test.sol",
         "file": "forge-std/Test.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29764,
+        "scope": 29943,
         "sourceUnit": 9112,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29710,
+        "id": 29889,
         "nodeType": "ImportDirective",
         "src": "209:32:34",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/console2.sol",
         "file": "forge-std/console2.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29764,
+        "scope": 29943,
         "sourceUnit": 26562,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29763,
+        "id": 29942,
         "nodeType": "ContractDefinition",
         "src": "242:2136:34",
         "nodes": [
           {
-            "id": 29714,
+            "id": 29893,
             "nodeType": "VariableDeclaration",
             "src": "310:19:34",
             "nodes": [],
@@ -1376,7 +1376,7 @@
             "mutability": "mutable",
             "name": "mainnetFork",
             "nameLocation": "318:11:34",
-            "scope": 29763,
+            "scope": 29942,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1384,7 +1384,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 29713,
+              "id": 29892,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "310:7:34",
@@ -1396,7 +1396,7 @@
             "visibility": "internal"
           },
           {
-            "id": 29716,
+            "id": 29895,
             "nodeType": "VariableDeclaration",
             "src": "335:20:34",
             "nodes": [],
@@ -1404,7 +1404,7 @@
             "mutability": "mutable",
             "name": "optimismFork",
             "nameLocation": "343:12:34",
-            "scope": 29763,
+            "scope": 29942,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1412,7 +1412,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 29715,
+              "id": 29894,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "335:7:34",
@@ -1424,7 +1424,7 @@
             "visibility": "internal"
           },
           {
-            "id": 29722,
+            "id": 29901,
             "nodeType": "VariableDeclaration",
             "src": "763:53:34",
             "nodes": [],
@@ -1432,7 +1432,7 @@
             "mutability": "mutable",
             "name": "MAINNET_RPC_URL",
             "nameLocation": "771:15:34",
-            "scope": 29763,
+            "scope": 29942,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1440,7 +1440,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 29717,
+              "id": 29896,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "763:6:34",
@@ -1453,7 +1453,7 @@
               "arguments": [
                 {
                   "hexValue": "5250435f4d41494e4e4554",
-                  "id": 29720,
+                  "id": 29899,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1476,7 +1476,7 @@
                   }
                 ],
                 "expression": {
-                  "id": 29718,
+                  "id": 29897,
                   "name": "vm",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
@@ -1487,7 +1487,7 @@
                     "typeString": "contract Vm"
                   }
                 },
-                "id": 29719,
+                "id": 29898,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": false,
@@ -1502,7 +1502,7 @@
                   "typeString": "function (string memory) view external returns (string memory)"
                 }
               },
-              "id": 29721,
+              "id": 29900,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
@@ -1521,7 +1521,7 @@
             "visibility": "internal"
           },
           {
-            "id": 29728,
+            "id": 29907,
             "nodeType": "VariableDeclaration",
             "src": "826:55:34",
             "nodes": [],
@@ -1529,7 +1529,7 @@
             "mutability": "mutable",
             "name": "OPTIMISM_RPC_URL",
             "nameLocation": "834:16:34",
-            "scope": 29763,
+            "scope": 29942,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1537,7 +1537,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 29723,
+              "id": 29902,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "826:6:34",
@@ -1550,7 +1550,7 @@
               "arguments": [
                 {
                   "hexValue": "5250435f4f5054494d49534d",
-                  "id": 29726,
+                  "id": 29905,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1573,7 +1573,7 @@
                   }
                 ],
                 "expression": {
-                  "id": 29724,
+                  "id": 29903,
                   "name": "vm",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
@@ -1584,7 +1584,7 @@
                     "typeString": "contract Vm"
                   }
                 },
-                "id": 29725,
+                "id": 29904,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": false,
@@ -1599,7 +1599,7 @@
                   "typeString": "function (string memory) view external returns (string memory)"
                 }
               },
-              "id": 29727,
+              "id": 29906,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
@@ -1618,12 +1618,12 @@
             "visibility": "internal"
           },
           {
-            "id": 29752,
+            "id": 29931,
             "nodeType": "FunctionDefinition",
             "src": "889:202:34",
             "nodes": [],
             "body": {
-              "id": 29751,
+              "id": 29930,
               "nodeType": "Block",
               "src": "913:178:34",
               "nodes": [],
@@ -1633,7 +1633,7 @@
                     "arguments": [
                       {
                         "hexValue": "5365747570204d61696e6e657420616e64204f7074696d69736d20666f726b732e2e2e",
-                        "id": 29734,
+                        "id": 29913,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1656,7 +1656,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29731,
+                        "id": 29910,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1667,7 +1667,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29733,
+                      "id": 29912,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1682,7 +1682,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29735,
+                    "id": 29914,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1698,23 +1698,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29736,
+                  "id": 29915,
                   "nodeType": "ExpressionStatement",
                   "src": "919:51:34"
                 },
                 {
                   "expression": {
-                    "id": 29742,
+                    "id": 29921,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29737,
+                      "id": 29916,
                       "name": "mainnetFork",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29714,
+                      "referencedDeclaration": 29893,
                       "src": "982:11:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1726,11 +1726,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 29740,
+                          "id": 29919,
                           "name": "MAINNET_RPC_URL",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29722,
+                          "referencedDeclaration": 29901,
                           "src": "1010:15:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_storage",
@@ -1746,7 +1746,7 @@
                           }
                         ],
                         "expression": {
-                          "id": 29738,
+                          "id": 29917,
                           "name": "vm",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -1757,7 +1757,7 @@
                             "typeString": "contract Vm"
                           }
                         },
-                        "id": 29739,
+                        "id": 29918,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1772,7 +1772,7 @@
                           "typeString": "function (string memory) external returns (uint256)"
                         }
                       },
-                      "id": 29741,
+                      "id": 29920,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1794,23 +1794,23 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 29743,
+                  "id": 29922,
                   "nodeType": "ExpressionStatement",
                   "src": "982:44:34"
                 },
                 {
                   "expression": {
-                    "id": 29749,
+                    "id": 29928,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29744,
+                      "id": 29923,
                       "name": "optimismFork",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29716,
+                      "referencedDeclaration": 29895,
                       "src": "1036:12:34",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1822,11 +1822,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 29747,
+                          "id": 29926,
                           "name": "OPTIMISM_RPC_URL",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29728,
+                          "referencedDeclaration": 29907,
                           "src": "1065:16:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_storage",
@@ -1842,7 +1842,7 @@
                           }
                         ],
                         "expression": {
-                          "id": 29745,
+                          "id": 29924,
                           "name": "vm",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -1853,7 +1853,7 @@
                             "typeString": "contract Vm"
                           }
                         },
-                        "id": 29746,
+                        "id": 29925,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1868,7 +1868,7 @@
                           "typeString": "function (string memory) external returns (uint256)"
                         }
                       },
-                      "id": 29748,
+                      "id": 29927,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1890,7 +1890,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 29750,
+                  "id": 29929,
                   "nodeType": "ExpressionStatement",
                   "src": "1036:46:34"
                 }
@@ -1903,29 +1903,29 @@
             "name": "setUp",
             "nameLocation": "898:5:34",
             "parameters": {
-              "id": 29729,
+              "id": 29908,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "903:2:34"
             },
             "returnParameters": {
-              "id": 29730,
+              "id": 29909,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "913:0:34"
             },
-            "scope": 29763,
+            "scope": 29942,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29762,
+            "id": 29941,
             "nodeType": "FunctionDefinition",
             "src": "1139:92:34",
             "nodes": [],
             "body": {
-              "id": 29761,
+              "id": 29940,
               "nodeType": "Block",
               "src": "1179:52:34",
               "nodes": [],
@@ -1938,17 +1938,17 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 29758,
+                        "id": 29937,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 29756,
+                          "id": 29935,
                           "name": "mainnetFork",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29714,
+                          "referencedDeclaration": 29893,
                           "src": "1196:11:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1958,11 +1958,11 @@
                         "nodeType": "BinaryOperation",
                         "operator": "!=",
                         "rightExpression": {
-                          "id": 29757,
+                          "id": 29936,
                           "name": "optimismFork",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29716,
+                          "referencedDeclaration": 29895,
                           "src": "1211:12:34",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1983,7 +1983,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 29755,
+                      "id": 29934,
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -1994,7 +1994,7 @@
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 29759,
+                    "id": 29938,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2010,7 +2010,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29760,
+                  "id": 29939,
                   "nodeType": "ExpressionStatement",
                   "src": "1189:35:34"
                 }
@@ -2023,18 +2023,18 @@
             "name": "testForkIdDiffer",
             "nameLocation": "1148:16:34",
             "parameters": {
-              "id": 29753,
+              "id": 29932,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1164:2:34"
             },
             "returnParameters": {
-              "id": 29754,
+              "id": 29933,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1179:0:34"
             },
-            "scope": 29763,
+            "scope": 29942,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
@@ -2044,7 +2044,7 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 29711,
+              "id": 29890,
               "name": "Test",
               "nameLocations": [
                 "263:4:34"
@@ -2053,7 +2053,7 @@
               "referencedDeclaration": 9111,
               "src": "263:4:34"
             },
-            "id": 29712,
+            "id": 29891,
             "nodeType": "InheritanceSpecifier",
             "src": "263:4:34"
           }
@@ -2063,7 +2063,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          29763,
+          29942,
           9111,
           1846,
           1843,
@@ -2077,7 +2077,7 @@
         ],
         "name": "ForkTest",
         "nameLocation": "251:8:34",
-        "scope": 29764,
+        "scope": 29943,
         "usedErrors": []
       }
     ],

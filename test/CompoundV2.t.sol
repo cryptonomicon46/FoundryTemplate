@@ -15,6 +15,7 @@ contract CompoundV2Test is Test {
       CERC20 cDAI = CERC20(0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643);
 
       CERC20 cUSDC = CERC20(0x39AA39c021dfbaE8faC545936693aC917d5E7563);
+      ICOMP comp = ICOMP(0xc00e94Cb662C3520282E6f5717214004A7f26888);
 
     CETH cETH = CETH(0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5);
     CERC20 cWBTC = CERC20(0xccF4429DB6322D5C611ee964527D42E5d685DD6a);
@@ -24,7 +25,8 @@ contract CompoundV2Test is Test {
     IComptroller comptroller = IComptroller(0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B);
     CheatCodes cheats = CheatCodes(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D);
      address here = address(this);
-
+     address[] cTokens = new address[](2);
+    uint[]  results = new uint[](2);
 
 
 
@@ -36,6 +38,12 @@ contract CompoundV2Test is Test {
      vm.label(address(cETH),"cETH");
      vm.label(address(comptroller),"comptroller");
      vm.label(address(this),"here");
+
+    console.log("Enter the markets");
+    
+    cTokens[0] = address(cETH);
+    cTokens[1] = address(cDAI);
+    results = comptroller.enterMarkets(cTokens);
 
 
     }
@@ -153,16 +161,36 @@ contract CompoundV2Test is Test {
       emit log_named_decimal_uint("ETH redeemed after advancing blocks", finalBalETH,18);
 
     }
-    function testEnterMarket_ETH() public {
-        address[] memory cTokens = new address[](2);
-        uint[] memory results = new uint[](2);
-        cTokens[0] = address(cETH);
-        cTokens[1] = address(cDAI);
 
-        assertFalse(comptroller.checkMembership(here,cTokens[0]));
-        console.log("Checking membership before minting:", comptroller.checkMembership(here,cTokens[0]));
-        results = comptroller.enterMarkets(cTokens);
-        emit log_named_uint("cETH balance before entering the market", cETH.balanceOf(here));
+    function testEnterMarkets_ALL() public {
+        address[] memory marketsEntered = new address[](2);
+        marketsEntered = comptroller.getAssetsIn(here);
+        assert(results[0]==0);
+        assert(results[1]==0);
+
+        assertEq(marketsEntered[0],address(cETH));
+        assertEq(marketsEntered[1],address(cDAI));
+    }
+
+    function testExitMarkets_ALL() public {
+        uint256[] memory marketsExited = new uint256[](2);
+        marketsExited[0] = comptroller.exitMarket(cTokens[0]);
+        marketsExited[1] = comptroller.exitMarket(cTokens[1]);
+        assert(marketsExited[0]==0);
+        assert(marketsExited[1]==0);
+    }
+    function testEnterMarket_ETH() public {
+        console.log("testEnterMarket_ETH starting....");
+        bool checkMembership_0 = comptroller.checkMembership(here,cTokens[0]);
+        console.log("Checking membership for cETH market");
+        assertTrue(checkMembership_0);
+
+        (,uint256 collateralFactor,) = comptroller.markets(cTokens[0]);
+        emit log_named_decimal_uint("CollateralFactor before supplying ETH:", collateralFactor,18);
+
+        (,uint256 accountLiquidity,) = comptroller.getAccountLiquidity(here);
+        emit log_named_decimal_uint("Account liquidity in $USD (before supplying ETH)", accountLiquidity,18);
+
         emit log_named_decimal_uint("cETH Exchange Rate", cETH.exchangeRateCurrent(),(18-8+18));
         uint expectedMinted = (1e18* 1000 ether)/cETH.exchangeRateCurrent();
         emit log_named_decimal_uint("Expected cETH minted tokens:", expectedMinted,8);
@@ -170,20 +198,25 @@ contract CompoundV2Test is Test {
         cETH.mint{value: 1_000 ether}();
         results = comptroller.enterMarkets(cTokens);
         emit log_named_decimal_uint("This contract's cETH balance after supplying ETH:", cETH.balanceOf(here),8);
-        emit log_named_uint("Entered cETH market check (post mint)", results[0]);
-        assertTrue(comptroller.checkMembership(here,cTokens[0]));
-        assertEq(comptroller.getAssetsIn(here)[0],cTokens[0]);
-        console.log("Get assets entered in:", comptroller.getAssetsIn(here)[0]);
-        console.log("Checking membership after minting");
-        console.logBool(comptroller.checkMembership(here,cTokens[0]));
-        (,uint256 collateralFactor,) = comptroller.markets(cTokens[0]);
-        emit log_named_decimal_uint("CollateralFactor:", collateralFactor,18);
-        (,uint256 accountLiquidity,) = comptroller.getAccountLiquidity(here);
-        emit log_named_decimal_uint("Account liquidity before borrowing cDAI", accountLiquidity,18);
+
+
+        (, collateralFactor,) = comptroller.markets(cTokens[0]);
+        emit log_named_decimal_uint("CollateralFactor after supplying ETH:", collateralFactor,18);
+
+        (, accountLiquidity,) = comptroller.getAccountLiquidity(here);
+        emit log_named_decimal_uint("Account liquidity in $USD (after supplying ETH)", accountLiquidity,18);
+
         emit log_named_decimal_uint("cEth balance of here", cETH.balanceOf(here),8);
         console.log("Borrowing cDAI tokens..");
         uint256 borrowAmount = 1000 ether;
+
+        uint256 closeFactor = comptroller.closeFactorMantissa();
+        emit log_named_decimal_uint("Close factor before borrowing DAI", closeFactor,18);
+
         assertEq(cDAI.borrow(1000 ether),0);
+
+                 closeFactor = comptroller.closeFactorMantissa();
+        emit log_named_decimal_uint("Close factor after borrowing DAI", closeFactor,18);
         emit log_named_decimal_uint("Collateral factor of cDAI", collateralFactor,18);
 
         console.log("Advancing blocks...");
@@ -196,7 +229,23 @@ contract CompoundV2Test is Test {
         assertEq(cDAI.borrowBalanceCurrent(here),0);
 
 
+         closeFactor = comptroller.closeFactorMantissa();
+        emit log_named_decimal_uint("Close factor after repaying DAI", closeFactor,18);
+
+
     }
+
+   function testSupplyETH_ClaimComp() public {
+        vm.deal(here, 1_000 ether);
+        emit log_named_decimal_uint("Comp balance before supplying liquidity", comp.balanceOf(here),18);
+        cETH.mint{value: 1_000 ether}();
+        emit log_named_decimal_uint("Comp balance after supplying liquidity", comp.balanceOf(here),18);
+        cETH.borrow(500 ether);
+        vm.roll(block.number + 1_000_000);
+        emit log_named_decimal_uint("Comp balance after time advance", comp.balanceOf(here),18);
+
+
+   }
 
     function testMint_cWBTC() public {
         deal(address(wbtc), here, 1000e8);

@@ -41,6 +41,14 @@ interface CETH {
 
 }
 
+interface ICOMP {
+    function balanceOf(address account) external returns (uint);
+    function transfer(address dst,uint amount) external returns  (bool);
+    function transferFrom(address spender,address dst, uint256 amount) external returns (bool);
+    
+
+}
+
 interface IComptroller{
     function enterMarkets(address[] memory) external returns (uint256[] memory);
     function mintAllowed(address cToken, address minter, uint256 mintAmount) external returns (uint256);
@@ -54,11 +62,9 @@ interface IComptroller{
     function transferAllowed(address cToken, address src, address dst, uint256 transferTokens) external returns (uint256);
     function getAccountLiquidity(address account) external returns (uint256, uint256,uint256);
     function markets(address cToken) external returns (bool,uint256,bool);
+    function closeFactorMantissa() external view returns (uint256);
+     function claimComp(address holder) external;
+     function claimComp(address  holder, address[] memory cTokens) external;
 
 
-
-
-
-
-    
 }
