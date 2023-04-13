@@ -127,15 +127,15 @@ contract CompoundV2Test is Test {
 
     }
 
-    function testSupply_ETH() public{
+/***@notice  Supply ETH to the cETH contract, check the cToken balances and redeem. 
+ */    function testSupply_ETH() public{
+     console.log("Supplying liquidity into the cETH contract");
         vm.deal(here, 1000 ether); 
-    
         uint256 initialBalETH = address(this).balance;
-        // emit log_named_decimal_uint("cETH underlying balance", cETH.getCash(),18);
+        emit log_named_uint("Supplied ETH liquidity", 1000 ether);
         emit log_named_uint("Initial cETH balance of this contract:", cETH.balanceOf(here));
         cETH.mint{value: 1000 ether}();
         emit log_named_decimal_uint("cETH balance after calling mint:", cETH.balanceOf(here),0);
-
         uint256 calcExchangeRate = 1e18*(cETH.getCash() + cETH.totalBorrowsCurrent() - cETH.totalReserves())/cETH.totalSupply();
         uint256 calculatedMinted = (1000 ether *1e18)/calcExchangeRate;
         emit log_named_decimal_uint("Calculated Exchange Rate", calcExchangeRate,0);
@@ -143,20 +143,14 @@ contract CompoundV2Test is Test {
         emit log_named_decimal_uint("Exchange rate", cETH.exchangeRateCurrent(),(0)); 
        emit log_named_uint("Calculated minted", calculatedMinted);
        uint256 actualMinted_cETH = cETH.balanceOf(here);
-       emit log_named_uint("Actual minted before block advance", actualMinted_cETH);
        assertEq(calculatedMinted,actualMinted_cETH);
-
-       vm.roll(block.number+50000);
+       vm.roll(block.number+50_000);
        uint256 currentBalanceMinted  = cETH.balanceOf(here);
-       emit log_named_uint("Minted balance after block advance", currentBalanceMinted);
        assertEq(cETH.redeem(currentBalanceMinted),0);
        assertEq(cETH.balanceOf(here),0);
        uint256 finalBalETH  = address(this).balance;
-      emit log_named_decimal_uint("ETH Balance after redeem", finalBalETH,18);
-
-
-
-
+        assertGt(finalBalETH,initialBalETH);
+      emit log_named_decimal_uint("ETH redeemed after advancing blocks", finalBalETH,18);
 
     }
     function testEnterMarket_ETH() public {
