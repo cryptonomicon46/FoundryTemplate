@@ -33,6 +33,8 @@ interface CETH {
     function totalBorrowsCurrent() external returns (uint);
     function totalReserves() external returns (uint);
     function totalSupply() external returns (uint);
+        function borrow(uint) external returns (uint);
+
 
 
 }
