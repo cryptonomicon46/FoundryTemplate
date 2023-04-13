@@ -154,50 +154,46 @@ contract CompoundV2Test is Test {
 
     }
     function testEnterMarket_ETH() public {
-        address[] memory cTokens = new address[](1);
-        uint[] memory results = new uint[](1);
+        address[] memory cTokens = new address[](2);
+        uint[] memory results = new uint[](2);
         cTokens[0] = address(cETH);
+        cTokens[1] = address(cDAI);
 
         assertFalse(comptroller.checkMembership(here,cTokens[0]));
         console.log("Checking membership before minting:", comptroller.checkMembership(here,cTokens[0]));
         results = comptroller.enterMarkets(cTokens);
-        emit log_named_uint("Entered cETH market check (pre mint)", comptroller.enterMarkets(cTokens)[0]);
-
+        emit log_named_uint("cETH balance before entering the market", cETH.balanceOf(here));
+        emit log_named_decimal_uint("cETH Exchange Rate", cETH.exchangeRateCurrent(),(18-8+18));
+        uint expectedMinted = (1e18* 1000 ether)/cETH.exchangeRateCurrent();
+        emit log_named_decimal_uint("Expected cETH minted tokens:", expectedMinted,8);
         vm.deal(here, 1_000 ether);
         cETH.mint{value: 1_000 ether}();
         results = comptroller.enterMarkets(cTokens);
-        emit log_named_uint("This contract's cETH balance after supplying 1 ETH:", cETH.balanceOf(here));
+        emit log_named_decimal_uint("This contract's cETH balance after supplying ETH:", cETH.balanceOf(here),8);
         emit log_named_uint("Entered cETH market check (post mint)", results[0]);
         assertTrue(comptroller.checkMembership(here,cTokens[0]));
         assertEq(comptroller.getAssetsIn(here)[0],cTokens[0]);
         console.log("Get assets entered in:", comptroller.getAssetsIn(here)[0]);
         console.log("Checking membership after minting");
         console.logBool(comptroller.checkMembership(here,cTokens[0]));
-
-
         (,uint256 collateralFactor,) = comptroller.markets(cTokens[0]);
         emit log_named_decimal_uint("CollateralFactor:", collateralFactor,18);
-
-
         (,uint256 accountLiquidity,) = comptroller.getAccountLiquidity(here);
         emit log_named_decimal_uint("Account liquidity before borrowing cDAI", accountLiquidity,18);
-
         emit log_named_decimal_uint("cEth balance of here", cETH.balanceOf(here),8);
+        console.log("Borrowing cDAI tokens..");
+        uint256 borrowAmount = 1000 ether;
+        assertEq(cDAI.borrow(1000 ether),0);
+        emit log_named_decimal_uint("Collateral factor of cDAI", collateralFactor,18);
 
-        console.log("Borrowing cETH tokens..");
-
-        assert(cETH.borrow(30_000*1e8)==0);
-        (, collateralFactor,) = comptroller.markets(cTokens[0]);
-
-        emit log_named_decimal_uint("Collateral factor after borrowing eth", collateralFactor,18);
-        uint256 borrowBalanceBefore = cETH.borrowBalanceCurrent(here);
-        emit log_named_decimal_uint("Borrow balance after borrowing cETH", borrowBalanceBefore,8);
         console.log("Advancing blocks...");
-        vm.roll(block.number + 100_000);
-        uint256 borrowBalanceAfter = cETH.borrowBalanceCurrent(here);
-        emit log_named_decimal_uint("Borrow balance after borrowing cETH", cETH.borrowBalanceCurrent(here),8);
-        assertGt(borrowBalanceAfter,borrowBalanceBefore);
+        uint256 borrowBalanceDai = dai.balanceOf(here);
+        emit log_named_decimal_uint("dai balance of this contract", dai.balanceOf(here),18);
+        emit log_named_decimal_uint("cDAI borrow balance of this contract", cDAI.borrowBalanceCurrent(here),18);
 
+        dai.approve(address(cDAI), borrowBalanceDai);
+        assertEq(cDAI.repayBorrow(borrowBalanceDai),0);
+        assertEq(cDAI.borrowBalanceCurrent(here),0);
 
 
     }

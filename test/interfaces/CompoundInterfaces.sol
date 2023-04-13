@@ -17,6 +17,8 @@ interface CERC20 {
     function totalBorrowsCurrent() external returns (uint);
     function borrow(uint) external returns (uint);
     function borrowRatePerBlock() external returns (uint);
+    function repayBorrow(uint repayAmount) external returns (uint);
+    function approve(address account, uint256 amount) external returns (bool);
 }
 
 interface CETH {

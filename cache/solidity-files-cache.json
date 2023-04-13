@@ -1269,8 +1269,8 @@
       }
     },
     "test/CompoundV2.t.sol": {
-      "lastModificationDate": 1681350072101,
-      "contentHash": "2b45d43afcd83b8f605947395a4efccd",
+      "lastModificationDate": 1681355747475,
+      "contentHash": "dafcd8f703a5a9e5f63e1abfbac8b88d",
       "sourceName": "test/CompoundV2.t.sol",
       "solcConfig": {
         "settings": {
@@ -1894,8 +1894,8 @@
       }
     },
     "test/interfaces/CompoundInterfaces.sol": {
-      "lastModificationDate": 1681349206729,
-      "contentHash": "766ee68a40939b8f98b083cc894c6930",
+      "lastModificationDate": 1681354479533,
+      "contentHash": "258bdbb0d508b97162bc8152305dd27d",
       "sourceName": "test/interfaces/CompoundInterfaces.sol",
       "solcConfig": {
         "settings": {
