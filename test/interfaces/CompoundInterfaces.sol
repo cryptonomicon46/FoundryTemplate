@@ -45,7 +45,8 @@ interface ICOMP {
     function balanceOf(address account) external returns (uint);
     function transfer(address dst,uint amount) external returns  (bool);
     function transferFrom(address spender,address dst, uint256 amount) external returns (bool);
-    
+    function totalSupply() external returns (uint);
+
 
 }
 
@@ -63,8 +64,8 @@ interface IComptroller{
     function getAccountLiquidity(address account) external returns (uint256, uint256,uint256);
     function markets(address cToken) external returns (bool,uint256,bool);
     function closeFactorMantissa() external view returns (uint256);
-     function claimComp(address holder) external;
-     function claimComp(address  holder, address[] memory cTokens) external;
+    //  function claimComp(address holder) external;
+     function claimComp(address holder, address[] memory cTokens) external;
 
 
 }

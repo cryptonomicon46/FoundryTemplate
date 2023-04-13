@@ -103,7 +103,6 @@ contract CompoundV2Test is Test {
         assert(cDAI.mint(10_000 ether)==0);
         emit log_uint(cDAI.getCash());
         emit log_uint(cDAI.totalBorrowsCurrent());
-        uint initialTotalBorrows = cDAI.totalBorrowsCurrent();
         emit log_named_decimal_uint("TotalBorrows before borrow:",cDAI.totalBorrowsCurrent(),18);
 
         emit log_uint(cDAI.getCash());
@@ -208,7 +207,6 @@ contract CompoundV2Test is Test {
 
         emit log_named_decimal_uint("cEth balance of here", cETH.balanceOf(here),8);
         console.log("Borrowing cDAI tokens..");
-        uint256 borrowAmount = 1000 ether;
 
         uint256 closeFactor = comptroller.closeFactorMantissa();
         emit log_named_decimal_uint("Close factor before borrowing DAI", closeFactor,18);
@@ -236,13 +234,31 @@ contract CompoundV2Test is Test {
     }
 
    function testSupplyETH_ClaimComp() public {
+        emit log_named_uint("Comp totalSupply", comp.totalSupply());
+
+        address[] memory tokens = new address[](1);
+        tokens[0] = address(cETH);
         vm.deal(here, 1_000 ether);
+
+        deal(address(dai),here,10_000 ether);
+        dai.approve(address(cDAI),10_000 ether);
+        assert(cDAI.mint(10_000 ether)==0);
+        // comptroller.claimComp(here);
+        results = comptroller.enterMarkets(cTokens);
+
+        comptroller.claimComp(here, cTokens);
+
         emit log_named_decimal_uint("Comp balance before supplying liquidity", comp.balanceOf(here),18);
-        cETH.mint{value: 1_000 ether}();
-        emit log_named_decimal_uint("Comp balance after supplying liquidity", comp.balanceOf(here),18);
-        cETH.borrow(500 ether);
+        // cETH.mint{value: 1_000 ether}();
+        // comptroller.claimComp_1(here, tokens);
+
+        // emit log_named_decimal_uint("Comp balance after supplying liquidity", comp.balanceOf(here),18);
+        // cETH.borrow(500 ether);
         vm.roll(block.number + 1_000_000);
+        comptroller.claimComp(here, cTokens);
+
         emit log_named_decimal_uint("Comp balance after time advance", comp.balanceOf(here),18);
+        
 
 
    }
