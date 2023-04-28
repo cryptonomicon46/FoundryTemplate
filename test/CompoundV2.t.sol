@@ -39,30 +39,37 @@ contract CompoundV2Test is Test {
      vm.label(address(comptroller),"comptroller");
      vm.label(address(this),"here");
 
-    console.log("Enter the markets");
     
     cTokens[0] = address(cETH);
     cTokens[1] = address(cDAI);
+    console.log("Entering cETH and cDAI markets..");
+
     results = comptroller.enterMarkets(cTokens);
 
 
     }
     
+    /**@notice testMint_cDAI achieves the following
+    - first deal this contract 4000 dai 
+     */
 
     function testMint_cDAI() public {
+    console.log("Dealing this contract 4000 DAI");
     deal(address(dai),here,4000 ether);
-    emit log_uint(dai.balanceOf(here));
+    emit log_named_uint("DAI balance of this contract",dai.balanceOf(here));
     dai.approve(address(cDAI),100 ether);
+    console.log("Minting some Compound Dai for this contract");
     assert(cDAI.mint(100 ether)==0);
-    emit log_uint(cDAI.balanceOfUnderlying(here));
-    emit log_uint(cDAI.balanceOf(here));
-    emit log_uint(cDAI.exchangeRateCurrent()/10**(18));
-    emit log_uint(cDAI.getCash());
-    emit log_uint(cDAI.totalBorrowsCurrent());
+    emit log_named_uint("cDAI underlying balance of this contract:",cDAI.balanceOfUnderlying(here)/1e18);
+    emit log_named_uint("cDAI balance of this contract:",cDAI.balanceOf(here));
+    emit log_named_decimal_uint("cDAI exchange rate:",cDAI.exchangeRateCurrent(),(18-8+18));
+    emit log_named_uint("cDAI cash reserves:",cDAI.getCash());
+    emit log_named_uint("cDAI total borrow in the market:",cDAI.totalBorrowsCurrent());
 
     }
 
     function testExchangeRate_DAI() public  {
+        console.log("Starting testExchangeRate_DAI()...");
         emit log_named_decimal_uint("Underlying(dai) cash reserves",cDAI.getCash(),18);
         emit log_named_decimal_uint("Underlying(dai) totalBorrows:",cDAI.totalBorrowsCurrent(),18);
         uint initialTotalBorrows = cDAI.totalBorrowsCurrent();
@@ -74,19 +81,20 @@ contract CompoundV2Test is Test {
     //    calcExchangeRate = calcExchangeRate/10**10;
 
         emit log_named_decimal_uint("Calculated Exchange Rate:",calcExchangeRate,(10));
-        uint expectedcDAIBal = 10_000 ether/calcExchangeRate;
-        emit log_named_decimal_uint("Calculated Underlying before mint", expectedcDAIBal,8);
+        uint cDAIBalCalc = 10_000 ether/calcExchangeRate;
+        emit log_named_decimal_uint("Calculated cDAI amount before minting:", cDAIBalCalc,8);
         emit log_named_decimal_uint("Current Exchange Rate:",cDAI.exchangeRateCurrent(),(18-8+18));
 
         deal(address(dai),here,10_000 ether);
         dai.approve(address(cDAI),10_000 ether);
         assert(cDAI.mint(10_000 ether)==0);
-        emit log_named_uint("cDAI Balance of this contract after minting:",cDAI.balanceOf(here));
         emit log_named_decimal_uint("cDAI Balance of contract after mint:", cDAI.balanceOf(here),8);
         emit log_named_decimal_uint("Dai underlying balance after mint:", cDAI.balanceOfUnderlying(here),18);
-        uint obs_cDAIBal = cDAI.balanceOf(here);
-        assertLt((expectedcDAIBal-obs_cDAIBal),0.01 ether);
-        skip(100_000_000);
+        uint cDAIBalActual = cDAI.balanceOf(here);
+        assertLt((cDAIBalCalc-cDAIBalActual),0.01 ether);
+        uint skipBlockTimeStamp = 100_000_000;
+        console.log("Skipping blocktimestamp by %s seconds", skipBlockTimeStamp);
+        skip(skipBlockTimeStamp);
         emit log_named_decimal_uint("Exchange rate after skip:",cDAI.exchangeRateCurrent(),(18-8+18));
         emit log_named_decimal_uint("cDAI totalReserves after skip",cDAI.totalReserves(),8);
 
@@ -97,32 +105,32 @@ contract CompoundV2Test is Test {
 
 
   function testBorrow_DAI() public  {
+        console.log("Entering testBorrow_DAI test...");
 
         deal(address(dai),here,10_000 ether);
+        console.log("Dealing this contract %s DAI.", dai.balanceOf(here)/1e18);
         dai.approve(address(cDAI),10_000 ether);
         assert(cDAI.mint(10_000 ether)==0);
-        emit log_uint(cDAI.getCash());
-        emit log_uint(cDAI.totalBorrowsCurrent());
-        emit log_named_decimal_uint("TotalBorrows before borrow:",cDAI.totalBorrowsCurrent(),18);
+        emit log_named_uint("Current cDAI borrow rate", cDAI.borrowRatePerBlock());
 
-        emit log_uint(cDAI.getCash());
-
-            emit log_named_decimal_uint("Borrowbalance beforte borrowing :",cDAI.borrowBalanceCurrent(here),18);
+        emit log_named_decimal_uint("cDAI borrow balance of here before borrowing :",cDAI.borrowBalanceCurrent(here),18);
 
         assert(cDAI.borrow(1000 ether) ==0);
         uint finalTotalBorrows = cDAI.totalBorrowsCurrent();
         emit log_named_decimal_uint("TotalBorrows After borrow:",cDAI.totalBorrowsCurrent(),18);
-        emit log_named_decimal_uint("Borrowbalance after borrowing :",cDAI.borrowBalanceCurrent(here),18);
+        uint256 cDAI_BB_1 = cDAI.borrowBalanceCurrent(here);
+        emit log_named_decimal_uint("cDAI current borrow balance of this contract:",cDAI_BB_1,18);
         emit log_named_decimal_uint("Borrow rate per block",cDAI.borrowRatePerBlock(),18);
         emit log_named_decimal_uint("Reserve Factor",cDAI.reserveFactorMantissa(),18);
-        assert(cDAI.borrow(1000 ether) ==0);
-        emit log_named_decimal_uint("Borrowbalance after borrowing :",cDAI.borrowBalanceCurrent(here),18);
-        assert(cDAI.borrow(1000 ether) ==0);
-        emit log_named_decimal_uint("Borrowbalance after borrowing :",cDAI.borrowBalanceCurrent(here),18);
-        assert(cDAI.borrow(1000 ether) ==0);
-        emit log_named_decimal_uint("Borrowbalance after borrowing :",cDAI.borrowBalanceCurrent(here),18);
-        skip(10000000000);
-        emit log_named_decimal_uint("Borrowbalance after borrowing :",cDAI.borrowBalanceCurrent(here),18);
+
+        vm.roll(block.number + 1);
+        uint256 cDAI_BB_2 = cDAI.borrowBalanceCurrent(here);
+        uint256 cDAI_delta = cDAI_BB_2- cDAI_BB_1;
+        emit log_named_decimal_uint("cDAI current borrow balance after advancing blocks:",cDAI_BB_2,18);
+        emit log_named_uint("Delta increase in the borrow balance in Gwei=",cDAI_delta/1e9 );
+        assertGt(cDAI_delta, 0 ether);
+
+
 
     }
 

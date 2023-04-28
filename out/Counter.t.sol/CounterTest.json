@@ -1352,13 +1352,13 @@
   },
   "ast": {
     "absolutePath": "test/Counter.t.sol",
-    "id": 29859,
+    "id": 29866,
     "exportedSymbols": {
       "Counter": [
         27383
       ],
       "CounterTest": [
-        29858
+        29865
       ],
       "DSTest": [
         1786
@@ -1413,7 +1413,7 @@
     "src": "39:1076:32",
     "nodes": [
       {
-        "id": 29731,
+        "id": 29738,
         "nodeType": "PragmaDirective",
         "src": "39:24:32",
         "nodes": [],
@@ -1425,51 +1425,51 @@
         ]
       },
       {
-        "id": 29732,
+        "id": 29739,
         "nodeType": "ImportDirective",
         "src": "65:28:32",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/Test.sol",
         "file": "forge-std/Test.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29859,
+        "scope": 29866,
         "sourceUnit": 9112,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29733,
+        "id": 29740,
         "nodeType": "ImportDirective",
         "src": "94:28:32",
         "nodes": [],
         "absolutePath": "src/Counter.sol",
         "file": "../src/Counter.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29859,
+        "scope": 29866,
         "sourceUnit": 27384,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29734,
+        "id": 29741,
         "nodeType": "ImportDirective",
         "src": "185:32:32",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/console2.sol",
         "file": "forge-std/console2.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29859,
+        "scope": 29866,
         "sourceUnit": 26562,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29858,
+        "id": 29865,
         "nodeType": "ContractDefinition",
         "src": "219:895:32",
         "nodes": [
           {
-            "id": 29739,
+            "id": 29746,
             "nodeType": "VariableDeclaration",
             "src": "254:22:32",
             "nodes": [],
@@ -1478,7 +1478,7 @@
             "mutability": "mutable",
             "name": "counter",
             "nameLocation": "269:7:32",
-            "scope": 29858,
+            "scope": 29865,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1486,10 +1486,10 @@
               "typeString": "contract Counter"
             },
             "typeName": {
-              "id": 29738,
+              "id": 29745,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 29737,
+                "id": 29744,
                 "name": "Counter",
                 "nameLocations": [
                   "254:7:32"
@@ -1508,7 +1508,7 @@
             "visibility": "public"
           },
           {
-            "id": 29741,
+            "id": 29748,
             "nodeType": "ErrorDefinition",
             "src": "283:21:32",
             "nodes": [],
@@ -1516,36 +1516,36 @@
             "name": "Unauthorized",
             "nameLocation": "289:12:32",
             "parameters": {
-              "id": 29740,
+              "id": 29747,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "301:2:32"
             }
           },
           {
-            "id": 29758,
+            "id": 29765,
             "nodeType": "FunctionDefinition",
             "src": "310:94:32",
             "nodes": [],
             "body": {
-              "id": 29757,
+              "id": 29764,
               "nodeType": "Block",
               "src": "334:70:32",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 29749,
+                    "id": 29756,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29744,
+                      "id": 29751,
                       "name": "counter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29739,
+                      "referencedDeclaration": 29746,
                       "src": "344:7:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_Counter_$27383",
@@ -1558,7 +1558,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 29747,
+                        "id": 29754,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1570,10 +1570,10 @@
                           "typeString": "function () returns (contract Counter)"
                         },
                         "typeName": {
-                          "id": 29746,
+                          "id": 29753,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 29745,
+                            "id": 29752,
                             "name": "Counter",
                             "nameLocations": [
                               "358:7:32"
@@ -1590,7 +1590,7 @@
                           }
                         }
                       },
-                      "id": 29748,
+                      "id": 29755,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1612,7 +1612,7 @@
                       "typeString": "contract Counter"
                     }
                   },
-                  "id": 29750,
+                  "id": 29757,
                   "nodeType": "ExpressionStatement",
                   "src": "344:23:32"
                 },
@@ -1621,7 +1621,7 @@
                     "arguments": [
                       {
                         "hexValue": "30",
-                        "id": 29754,
+                        "id": 29761,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1644,18 +1644,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 29751,
+                        "id": 29758,
                         "name": "counter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29739,
+                        "referencedDeclaration": 29746,
                         "src": "377:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Counter_$27383",
                           "typeString": "contract Counter"
                         }
                       },
-                      "id": 29753,
+                      "id": 29760,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1670,7 +1670,7 @@
                         "typeString": "function (uint256) external"
                       }
                     },
-                    "id": 29755,
+                    "id": 29762,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1686,7 +1686,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29756,
+                  "id": 29763,
                   "nodeType": "ExpressionStatement",
                   "src": "377:20:32"
                 }
@@ -1699,29 +1699,29 @@
             "name": "setUp",
             "nameLocation": "319:5:32",
             "parameters": {
-              "id": 29742,
+              "id": 29749,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "324:2:32"
             },
             "returnParameters": {
-              "id": 29743,
+              "id": 29750,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "334:0:32"
             },
-            "scope": 29858,
+            "scope": 29865,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29787,
+            "id": 29794,
             "nodeType": "FunctionDefinition",
             "src": "410:213:32",
             "nodes": [],
             "body": {
-              "id": 29786,
+              "id": 29793,
               "nodeType": "Block",
               "src": "449:174:32",
               "nodes": [],
@@ -1731,7 +1731,7 @@
                     "arguments": [
                       {
                         "hexValue": "5465737420496e6372656d656e742066756e6374696f6e206173206f776e65722e2e2e",
-                        "id": 29764,
+                        "id": 29771,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1754,7 +1754,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29761,
+                        "id": 29768,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1765,7 +1765,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29763,
+                      "id": 29770,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1780,7 +1780,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29765,
+                    "id": 29772,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1796,7 +1796,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29766,
+                  "id": 29773,
                   "nodeType": "ExpressionStatement",
                   "src": "459:51:32"
                 },
@@ -1808,18 +1808,18 @@
                         "expression": {
                           "argumentTypes": [],
                           "expression": {
-                            "id": 29768,
+                            "id": 29775,
                             "name": "counter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 29739,
+                            "referencedDeclaration": 29746,
                             "src": "529:7:32",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Counter_$27383",
                               "typeString": "contract Counter"
                             }
                           },
-                          "id": 29769,
+                          "id": 29776,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1834,7 +1834,7 @@
                             "typeString": "function () view external returns (uint256)"
                           }
                         },
-                        "id": 29770,
+                        "id": 29777,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1852,7 +1852,7 @@
                       },
                       {
                         "hexValue": "30",
-                        "id": 29771,
+                        "id": 29778,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1878,7 +1878,7 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 29767,
+                      "id": 29774,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -1910,7 +1910,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29772,
+                    "id": 29779,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1926,7 +1926,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29773,
+                  "id": 29780,
                   "nodeType": "ExpressionStatement",
                   "src": "520:28:32"
                 },
@@ -1936,18 +1936,18 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 29774,
+                        "id": 29781,
                         "name": "counter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29739,
+                        "referencedDeclaration": 29746,
                         "src": "558:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Counter_$27383",
                           "typeString": "contract Counter"
                         }
                       },
-                      "id": 29776,
+                      "id": 29783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1962,7 +1962,7 @@
                         "typeString": "function () external"
                       }
                     },
-                    "id": 29777,
+                    "id": 29784,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1978,7 +1978,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29778,
+                  "id": 29785,
                   "nodeType": "ExpressionStatement",
                   "src": "558:19:32"
                 },
@@ -1990,18 +1990,18 @@
                         "expression": {
                           "argumentTypes": [],
                           "expression": {
-                            "id": 29780,
+                            "id": 29787,
                             "name": "counter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 29739,
+                            "referencedDeclaration": 29746,
                             "src": "596:7:32",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Counter_$27383",
                               "typeString": "contract Counter"
                             }
                           },
-                          "id": 29781,
+                          "id": 29788,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2016,7 +2016,7 @@
                             "typeString": "function () view external returns (uint256)"
                           }
                         },
-                        "id": 29782,
+                        "id": 29789,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2034,7 +2034,7 @@
                       },
                       {
                         "hexValue": "31",
-                        "id": 29783,
+                        "id": 29790,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2060,7 +2060,7 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 29779,
+                      "id": 29786,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2092,7 +2092,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29784,
+                    "id": 29791,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2108,7 +2108,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29785,
+                  "id": 29792,
                   "nodeType": "ExpressionStatement",
                   "src": "587:29:32"
                 }
@@ -2121,29 +2121,29 @@
             "name": "testIncrementAsOwner",
             "nameLocation": "419:20:32",
             "parameters": {
-              "id": 29759,
+              "id": 29766,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "439:2:32"
             },
             "returnParameters": {
-              "id": 29760,
+              "id": 29767,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "449:0:32"
             },
-            "scope": 29858,
+            "scope": 29865,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29832,
+            "id": 29839,
             "nodeType": "FunctionDefinition",
             "src": "633:304:32",
             "nodes": [],
             "body": {
-              "id": 29831,
+              "id": 29838,
               "nodeType": "Block",
               "src": "673:264:32",
               "nodes": [],
@@ -2153,7 +2153,7 @@
                     "arguments": [
                       {
                         "hexValue": "5465737420496e6372656d656e742066756e6374696f6e206e6f742063616c6c6564206279206f776e65722e2e2e",
-                        "id": 29793,
+                        "id": 29800,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2176,7 +2176,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29790,
+                        "id": 29797,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -2187,7 +2187,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29792,
+                      "id": 29799,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2202,7 +2202,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29794,
+                    "id": 29801,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2218,7 +2218,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29795,
+                  "id": 29802,
                   "nodeType": "ExpressionStatement",
                   "src": "683:62:32"
                 },
@@ -2230,18 +2230,18 @@
                         "expression": {
                           "argumentTypes": [],
                           "expression": {
-                            "id": 29797,
+                            "id": 29804,
                             "name": "counter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 29739,
+                            "referencedDeclaration": 29746,
                             "src": "764:7:32",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Counter_$27383",
                               "typeString": "contract Counter"
                             }
                           },
-                          "id": 29798,
+                          "id": 29805,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2256,7 +2256,7 @@
                             "typeString": "function () view external returns (uint256)"
                           }
                         },
-                        "id": 29799,
+                        "id": 29806,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2274,7 +2274,7 @@
                       },
                       {
                         "hexValue": "30",
-                        "id": 29800,
+                        "id": 29807,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2300,7 +2300,7 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 29796,
+                      "id": 29803,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2332,7 +2332,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29801,
+                    "id": 29808,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2348,7 +2348,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29802,
+                  "id": 29809,
                   "nodeType": "ExpressionStatement",
                   "src": "755:28:32"
                 },
@@ -2357,18 +2357,18 @@
                     "arguments": [
                       {
                         "expression": {
-                          "id": 29806,
+                          "id": 29813,
                           "name": "Unauthorized",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 29741,
+                          "referencedDeclaration": 29748,
                           "src": "809:12:32",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_error_pure$__$returns$__$",
                             "typeString": "function () pure"
                           }
                         },
-                        "id": 29807,
+                        "id": 29814,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2391,7 +2391,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29803,
+                        "id": 29810,
                         "name": "vm",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -2402,7 +2402,7 @@
                           "typeString": "contract Vm"
                         }
                       },
-                      "id": 29805,
+                      "id": 29812,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2417,7 +2417,7 @@
                         "typeString": "function (bytes4) external"
                       }
                     },
-                    "id": 29808,
+                    "id": 29815,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2433,7 +2433,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29809,
+                  "id": 29816,
                   "nodeType": "ExpressionStatement",
                   "src": "793:38:32"
                 },
@@ -2444,7 +2444,7 @@
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 29815,
+                            "id": 29822,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2466,7 +2466,7 @@
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 29814,
+                          "id": 29821,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2478,14 +2478,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 29813,
+                            "id": 29820,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "850:7:32",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 29816,
+                        "id": 29823,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2510,7 +2510,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29810,
+                        "id": 29817,
                         "name": "vm",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -2521,7 +2521,7 @@
                           "typeString": "contract Vm"
                         }
                       },
-                      "id": 29812,
+                      "id": 29819,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2536,7 +2536,7 @@
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 29817,
+                    "id": 29824,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2552,7 +2552,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29818,
+                  "id": 29825,
                   "nodeType": "ExpressionStatement",
                   "src": "841:20:32"
                 },
@@ -2562,18 +2562,18 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 29819,
+                        "id": 29826,
                         "name": "counter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29739,
+                        "referencedDeclaration": 29746,
                         "src": "871:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Counter_$27383",
                           "typeString": "contract Counter"
                         }
                       },
-                      "id": 29821,
+                      "id": 29828,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2588,7 +2588,7 @@
                         "typeString": "function () external"
                       }
                     },
-                    "id": 29822,
+                    "id": 29829,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2604,7 +2604,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29823,
+                  "id": 29830,
                   "nodeType": "ExpressionStatement",
                   "src": "871:19:32"
                 },
@@ -2616,18 +2616,18 @@
                         "expression": {
                           "argumentTypes": [],
                           "expression": {
-                            "id": 29825,
+                            "id": 29832,
                             "name": "counter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 29739,
+                            "referencedDeclaration": 29746,
                             "src": "909:7:32",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Counter_$27383",
                               "typeString": "contract Counter"
                             }
                           },
-                          "id": 29826,
+                          "id": 29833,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2642,7 +2642,7 @@
                             "typeString": "function () view external returns (uint256)"
                           }
                         },
-                        "id": 29827,
+                        "id": 29834,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2660,7 +2660,7 @@
                       },
                       {
                         "hexValue": "31",
-                        "id": 29828,
+                        "id": 29835,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2686,7 +2686,7 @@
                           "typeString": "int_const 1"
                         }
                       ],
-                      "id": 29824,
+                      "id": 29831,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -2718,7 +2718,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29829,
+                    "id": 29836,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2734,7 +2734,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29830,
+                  "id": 29837,
                   "nodeType": "ExpressionStatement",
                   "src": "900:29:32"
                 }
@@ -2747,29 +2747,29 @@
             "name": "testFailIncNotByOwner",
             "nameLocation": "642:21:32",
             "parameters": {
-              "id": 29788,
+              "id": 29795,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "663:2:32"
             },
             "returnParameters": {
-              "id": 29789,
+              "id": 29796,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "673:0:32"
             },
-            "scope": 29858,
+            "scope": 29865,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29857,
+            "id": 29864,
             "nodeType": "FunctionDefinition",
             "src": "942:170:32",
             "nodes": [],
             "body": {
-              "id": 29856,
+              "id": 29863,
               "nodeType": "Block",
               "src": "983:129:32",
               "nodes": [],
@@ -2779,7 +2779,7 @@
                     "arguments": [
                       {
                         "hexValue": "54657374205365744e756d6265722066756e6374696f6e2e2e2e",
-                        "id": 29840,
+                        "id": 29847,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2802,7 +2802,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29837,
+                        "id": 29844,
                         "name": "console2",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -2813,7 +2813,7 @@
                           "typeString": "type(library console2)"
                         }
                       },
-                      "id": 29839,
+                      "id": 29846,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2828,7 +2828,7 @@
                         "typeString": "function (string memory) view"
                       }
                     },
-                    "id": 29841,
+                    "id": 29848,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2844,7 +2844,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29842,
+                  "id": 29849,
                   "nodeType": "ExpressionStatement",
                   "src": "993:42:32"
                 },
@@ -2852,11 +2852,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 29846,
+                        "id": 29853,
                         "name": "x",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29834,
+                        "referencedDeclaration": 29841,
                         "src": "1064:1:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2872,18 +2872,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 29843,
+                        "id": 29850,
                         "name": "counter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29739,
+                        "referencedDeclaration": 29746,
                         "src": "1046:7:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_Counter_$27383",
                           "typeString": "contract Counter"
                         }
                       },
-                      "id": 29845,
+                      "id": 29852,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2898,7 +2898,7 @@
                         "typeString": "function (uint256) external"
                       }
                     },
-                    "id": 29847,
+                    "id": 29854,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2914,7 +2914,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29848,
+                  "id": 29855,
                   "nodeType": "ExpressionStatement",
                   "src": "1046:20:32"
                 },
@@ -2926,18 +2926,18 @@
                         "expression": {
                           "argumentTypes": [],
                           "expression": {
-                            "id": 29850,
+                            "id": 29857,
                             "name": "counter",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 29739,
+                            "referencedDeclaration": 29746,
                             "src": "1085:7:32",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Counter_$27383",
                               "typeString": "contract Counter"
                             }
                           },
-                          "id": 29851,
+                          "id": 29858,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2952,7 +2952,7 @@
                             "typeString": "function () view external returns (uint256)"
                           }
                         },
-                        "id": 29852,
+                        "id": 29859,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2969,11 +2969,11 @@
                         }
                       },
                       {
-                        "id": 29853,
+                        "id": 29860,
                         "name": "x",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29834,
+                        "referencedDeclaration": 29841,
                         "src": "1103:1:32",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2992,7 +2992,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 29849,
+                      "id": 29856,
                       "name": "assertEq",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -3024,7 +3024,7 @@
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 29854,
+                    "id": 29861,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3040,7 +3040,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29855,
+                  "id": 29862,
                   "nodeType": "ExpressionStatement",
                   "src": "1076:29:32"
                 }
@@ -3053,17 +3053,17 @@
             "name": "testSetNumber",
             "nameLocation": "951:13:32",
             "parameters": {
-              "id": 29835,
+              "id": 29842,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 29834,
+                  "id": 29841,
                   "mutability": "mutable",
                   "name": "x",
                   "nameLocation": "973:1:32",
                   "nodeType": "VariableDeclaration",
-                  "scope": 29857,
+                  "scope": 29864,
                   "src": "965:9:32",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3072,7 +3072,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 29833,
+                    "id": 29840,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "965:7:32",
@@ -3087,12 +3087,12 @@
               "src": "964:11:32"
             },
             "returnParameters": {
-              "id": 29836,
+              "id": 29843,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "983:0:32"
             },
-            "scope": 29858,
+            "scope": 29865,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -3102,7 +3102,7 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 29735,
+              "id": 29742,
               "name": "Test",
               "nameLocations": [
                 "243:4:32"
@@ -3111,7 +3111,7 @@
               "referencedDeclaration": 9111,
               "src": "243:4:32"
             },
-            "id": 29736,
+            "id": 29743,
             "nodeType": "InheritanceSpecifier",
             "src": "243:4:32"
           }
@@ -3123,7 +3123,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          29858,
+          29865,
           9111,
           1846,
           1843,
@@ -3137,9 +3137,9 @@
         ],
         "name": "CounterTest",
         "nameLocation": "228:11:32",
-        "scope": 29859,
+        "scope": 29866,
         "usedErrors": [
-          29741
+          29748
         ]
       }
     ],
