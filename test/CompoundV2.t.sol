@@ -129,6 +129,7 @@ contract CompoundV2Test is Test {
         emit log_named_decimal_uint("cDAI current borrow balance after advancing blocks:",cDAI_BB_2,18);
         emit log_named_uint("Delta increase in the borrow balance in Gwei=",cDAI_delta/1e9 );
         assertGt(cDAI_delta, 0 ether);
+        console.log("testBorrowDai() ended");
 
 
 

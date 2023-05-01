@@ -83,3 +83,9 @@ forge test --gas-report.
 forge test --match-test testBurn --gas-report
 
 forge test --match-path test/CompoundV2.t.sol --match-contract CompoundV2Test --match-test "testMint_cDai" -vvvv
+
+Source ~/.bash_profile for the env variables on RPC endpoints.
+Find a better way to store and source them. Perhaps from a local .env file?
+Had to do the following to get all the standard libraries
+
+forge install foundry-rs/forge-std --no-commit for everything to run 

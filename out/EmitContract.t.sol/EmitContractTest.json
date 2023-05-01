@@ -1339,13 +1339,13 @@
   },
   "ast": {
     "absolutePath": "test/EmitContract.t.sol",
-    "id": 29956,
+    "id": 29962,
     "exportedSymbols": {
       "DSTest": [
         1786
       ],
       "EmitContractTest": [
-        29955
+        29961
       ],
       "ExpectEmit": [
         27408
@@ -1400,7 +1400,7 @@
     "src": "39:760:33",
     "nodes": [
       {
-        "id": 29867,
+        "id": 29873,
         "nodeType": "PragmaDirective",
         "src": "39:24:33",
         "nodes": [],
@@ -1412,51 +1412,51 @@
         ]
       },
       {
-        "id": 29868,
+        "id": 29874,
         "nodeType": "ImportDirective",
         "src": "65:28:33",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/Test.sol",
         "file": "forge-std/Test.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29956,
+        "scope": 29962,
         "sourceUnit": 9112,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29869,
+        "id": 29875,
         "nodeType": "ImportDirective",
         "src": "94:32:33",
         "nodes": [],
         "absolutePath": "lib/forge-std/src/console2.sol",
         "file": "forge-std/console2.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29956,
+        "scope": 29962,
         "sourceUnit": 26562,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29870,
+        "id": 29876,
         "nodeType": "ImportDirective",
         "src": "127:31:33",
         "nodes": [],
         "absolutePath": "src/ExpectEmit.sol",
         "file": "../src/ExpectEmit.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 29956,
+        "scope": 29962,
         "sourceUnit": 27409,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 29955,
+        "id": 29961,
         "nodeType": "ContractDefinition",
         "src": "160:639:33",
         "nodes": [
           {
-            "id": 29880,
+            "id": 29886,
             "nodeType": "EventDefinition",
             "src": "202:73:33",
             "nodes": [],
@@ -1465,18 +1465,18 @@
             "name": "Transfer",
             "nameLocation": "208:8:33",
             "parameters": {
-              "id": 29879,
+              "id": 29885,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 29874,
+                  "id": 29880,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "233:4:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 29880,
+                  "scope": 29886,
                   "src": "217:20:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1485,7 +1485,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 29873,
+                    "id": 29879,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "217:7:33",
@@ -1499,13 +1499,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 29876,
+                  "id": 29882,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "255:2:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 29880,
+                  "scope": 29886,
                   "src": "239:18:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1514,7 +1514,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 29875,
+                    "id": 29881,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "239:7:33",
@@ -1528,13 +1528,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 29878,
+                  "id": 29884,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "267:6:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 29880,
+                  "scope": 29886,
                   "src": "259:14:33",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1543,7 +1543,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 29877,
+                    "id": 29883,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "259:7:33",
@@ -1559,7 +1559,7 @@
             }
           },
           {
-            "id": 29883,
+            "id": 29889,
             "nodeType": "VariableDeclaration",
             "src": "280:18:33",
             "nodes": [],
@@ -1567,7 +1567,7 @@
             "mutability": "mutable",
             "name": "emitter",
             "nameLocation": "291:7:33",
-            "scope": 29955,
+            "scope": 29961,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1575,10 +1575,10 @@
               "typeString": "contract ExpectEmit"
             },
             "typeName": {
-              "id": 29882,
+              "id": 29888,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 29881,
+                "id": 29887,
                 "name": "ExpectEmit",
                 "nameLocations": [
                   "280:10:33"
@@ -1597,29 +1597,29 @@
             "visibility": "internal"
           },
           {
-            "id": 29894,
+            "id": 29900,
             "nodeType": "FunctionDefinition",
             "src": "304:70:33",
             "nodes": [],
             "body": {
-              "id": 29893,
+              "id": 29899,
               "nodeType": "Block",
               "src": "329:45:33",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 29891,
+                    "id": 29897,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 29886,
+                      "id": 29892,
                       "name": "emitter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29883,
+                      "referencedDeclaration": 29889,
                       "src": "339:7:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_ExpectEmit_$27408",
@@ -1632,7 +1632,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 29889,
+                        "id": 29895,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1644,10 +1644,10 @@
                           "typeString": "function () returns (contract ExpectEmit)"
                         },
                         "typeName": {
-                          "id": 29888,
+                          "id": 29894,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 29887,
+                            "id": 29893,
                             "name": "ExpectEmit",
                             "nameLocations": [
                               "353:10:33"
@@ -1664,7 +1664,7 @@
                           }
                         }
                       },
-                      "id": 29890,
+                      "id": 29896,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1686,7 +1686,7 @@
                       "typeString": "contract ExpectEmit"
                     }
                   },
-                  "id": 29892,
+                  "id": 29898,
                   "nodeType": "ExpressionStatement",
                   "src": "339:26:33"
                 }
@@ -1699,29 +1699,29 @@
             "name": "setUp",
             "nameLocation": "313:5:33",
             "parameters": {
-              "id": 29884,
+              "id": 29890,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "318:2:33"
             },
             "returnParameters": {
-              "id": 29885,
+              "id": 29891,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "329:0:33"
             },
-            "scope": 29955,
+            "scope": 29961,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29924,
+            "id": 29930,
             "nodeType": "FunctionDefinition",
             "src": "379:164:33",
             "nodes": [],
             "body": {
-              "id": 29923,
+              "id": 29929,
               "nodeType": "Block",
               "src": "412:131:33",
               "nodes": [],
@@ -1731,7 +1731,7 @@
                     "arguments": [
                       {
                         "hexValue": "74727565",
-                        "id": 29900,
+                        "id": 29906,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1747,7 +1747,7 @@
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 29901,
+                        "id": 29907,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1763,7 +1763,7 @@
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 29902,
+                        "id": 29908,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1779,7 +1779,7 @@
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 29903,
+                        "id": 29909,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1814,7 +1814,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29897,
+                        "id": 29903,
                         "name": "vm",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1825,7 +1825,7 @@
                           "typeString": "contract Vm"
                         }
                       },
-                      "id": 29899,
+                      "id": 29905,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1840,7 +1840,7 @@
                         "typeString": "function (bool,bool,bool,bool) external"
                       }
                     },
-                    "id": 29904,
+                    "id": 29910,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1856,7 +1856,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29905,
+                  "id": 29911,
                   "nodeType": "ExpressionStatement",
                   "src": "422:34:33"
                 },
@@ -1866,14 +1866,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 29909,
+                            "id": 29915,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -28,
                             "src": "489:4:33",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_EmitContractTest_$29955",
+                              "typeIdentifier": "t_contract$_EmitContractTest_$29961",
                               "typeString": "contract EmitContractTest"
                             }
                           }
@@ -1881,11 +1881,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_EmitContractTest_$29955",
+                              "typeIdentifier": "t_contract$_EmitContractTest_$29961",
                               "typeString": "contract EmitContractTest"
                             }
                           ],
-                          "id": 29908,
+                          "id": 29914,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1897,14 +1897,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 29907,
+                            "id": 29913,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "481:7:33",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 29910,
+                        "id": 29916,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1924,7 +1924,7 @@
                         "arguments": [
                           {
                             "hexValue": "31333337",
-                            "id": 29913,
+                            "id": 29919,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1946,7 +1946,7 @@
                               "typeString": "int_const 1337"
                             }
                           ],
-                          "id": 29912,
+                          "id": 29918,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1958,14 +1958,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 29911,
+                            "id": 29917,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "495:7:33",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 29914,
+                        "id": 29920,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1983,7 +1983,7 @@
                       },
                       {
                         "hexValue": "31333337",
-                        "id": 29915,
+                        "id": 29921,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2013,18 +2013,18 @@
                           "typeString": "int_const 1337"
                         }
                       ],
-                      "id": 29906,
+                      "id": 29912,
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29880,
+                      "referencedDeclaration": 29886,
                       "src": "472:8:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 29916,
+                    "id": 29922,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2040,7 +2040,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29917,
+                  "id": 29923,
                   "nodeType": "EmitStatement",
                   "src": "467:47:33"
                 },
@@ -2050,18 +2050,18 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 29918,
+                        "id": 29924,
                         "name": "emitter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29883,
+                        "referencedDeclaration": 29889,
                         "src": "525:7:33",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ExpectEmit_$27408",
                           "typeString": "contract ExpectEmit"
                         }
                       },
-                      "id": 29920,
+                      "id": 29926,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2076,7 +2076,7 @@
                         "typeString": "function () external"
                       }
                     },
-                    "id": 29921,
+                    "id": 29927,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2092,7 +2092,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29922,
+                  "id": 29928,
                   "nodeType": "ExpressionStatement",
                   "src": "525:11:33"
                 }
@@ -2105,29 +2105,29 @@
             "name": "testExpectEmit",
             "nameLocation": "388:14:33",
             "parameters": {
-              "id": 29895,
+              "id": 29901,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "402:2:33"
             },
             "returnParameters": {
-              "id": 29896,
+              "id": 29902,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "412:0:33"
             },
-            "scope": 29955,
+            "scope": 29961,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 29954,
+            "id": 29960,
             "nodeType": "FunctionDefinition",
             "src": "550:180:33",
             "nodes": [],
             "body": {
-              "id": 29953,
+              "id": 29959,
               "nodeType": "Block",
               "src": "597:133:33",
               "nodes": [],
@@ -2137,7 +2137,7 @@
                     "arguments": [
                       {
                         "hexValue": "74727565",
-                        "id": 29930,
+                        "id": 29936,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2153,7 +2153,7 @@
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 29931,
+                        "id": 29937,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2169,7 +2169,7 @@
                       },
                       {
                         "hexValue": "66616c7365",
-                        "id": 29932,
+                        "id": 29938,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2185,7 +2185,7 @@
                       },
                       {
                         "hexValue": "66616c7365",
-                        "id": 29933,
+                        "id": 29939,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2220,7 +2220,7 @@
                         }
                       ],
                       "expression": {
-                        "id": 29927,
+                        "id": 29933,
                         "name": "vm",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -2231,7 +2231,7 @@
                           "typeString": "contract Vm"
                         }
                       },
-                      "id": 29929,
+                      "id": 29935,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2246,7 +2246,7 @@
                         "typeString": "function (bool,bool,bool,bool) external"
                       }
                     },
-                    "id": 29934,
+                    "id": 29940,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2262,7 +2262,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29935,
+                  "id": 29941,
                   "nodeType": "ExpressionStatement",
                   "src": "607:36:33"
                 },
@@ -2272,14 +2272,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 29939,
+                            "id": 29945,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -28,
                             "src": "676:4:33",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_EmitContractTest_$29955",
+                              "typeIdentifier": "t_contract$_EmitContractTest_$29961",
                               "typeString": "contract EmitContractTest"
                             }
                           }
@@ -2287,11 +2287,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_EmitContractTest_$29955",
+                              "typeIdentifier": "t_contract$_EmitContractTest_$29961",
                               "typeString": "contract EmitContractTest"
                             }
                           ],
-                          "id": 29938,
+                          "id": 29944,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2303,14 +2303,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 29937,
+                            "id": 29943,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "668:7:33",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 29940,
+                        "id": 29946,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2330,7 +2330,7 @@
                         "arguments": [
                           {
                             "hexValue": "31333337",
-                            "id": 29943,
+                            "id": 29949,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2352,7 +2352,7 @@
                               "typeString": "int_const 1337"
                             }
                           ],
-                          "id": 29942,
+                          "id": 29948,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2364,14 +2364,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 29941,
+                            "id": 29947,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "682:7:33",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 29944,
+                        "id": 29950,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2389,7 +2389,7 @@
                       },
                       {
                         "hexValue": "31333338",
-                        "id": 29945,
+                        "id": 29951,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2419,18 +2419,18 @@
                           "typeString": "int_const 1338"
                         }
                       ],
-                      "id": 29936,
+                      "id": 29942,
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 29880,
+                      "referencedDeclaration": 29886,
                       "src": "659:8:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 29946,
+                    "id": 29952,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2446,7 +2446,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29947,
+                  "id": 29953,
                   "nodeType": "EmitStatement",
                   "src": "654:47:33"
                 },
@@ -2456,18 +2456,18 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 29948,
+                        "id": 29954,
                         "name": "emitter",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 29883,
+                        "referencedDeclaration": 29889,
                         "src": "712:7:33",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ExpectEmit_$27408",
                           "typeString": "contract ExpectEmit"
                         }
                       },
-                      "id": 29950,
+                      "id": 29956,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2482,7 +2482,7 @@
                         "typeString": "function () external"
                       }
                     },
-                    "id": 29951,
+                    "id": 29957,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2498,7 +2498,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 29952,
+                  "id": 29958,
                   "nodeType": "ExpressionStatement",
                   "src": "712:11:33"
                 }
@@ -2511,18 +2511,18 @@
             "name": "testExpectEmitDoNotCheckData",
             "nameLocation": "559:28:33",
             "parameters": {
-              "id": 29925,
+              "id": 29931,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "587:2:33"
             },
             "returnParameters": {
-              "id": 29926,
+              "id": 29932,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "597:0:33"
             },
-            "scope": 29955,
+            "scope": 29961,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -2532,7 +2532,7 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 29871,
+              "id": 29877,
               "name": "Test",
               "nameLocations": [
                 "189:4:33"
@@ -2541,7 +2541,7 @@
               "referencedDeclaration": 9111,
               "src": "189:4:33"
             },
-            "id": 29872,
+            "id": 29878,
             "nodeType": "InheritanceSpecifier",
             "src": "189:4:33"
           }
@@ -2553,7 +2553,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          29955,
+          29961,
           9111,
           1846,
           1843,
@@ -2567,7 +2567,7 @@
         ],
         "name": "EmitContractTest",
         "nameLocation": "169:16:33",
-        "scope": 29956,
+        "scope": 29962,
         "usedErrors": []
       }
     ],
